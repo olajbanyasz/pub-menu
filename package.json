@@ -1,0 +1,54 @@
+{
+  "name": "pub-menu",
+  "version": "1.0.0",
+  "description": "Pub-Menu - MobX + React project with JSX, ES6 and decorator compilation",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "build": "webpack",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "mobx"
+  ],
+  "author": "André Zsolt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobxjs/mobx/issues"
+  },
+  "homepage": "http://mobxjs.github.com/mobx",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "localforage": "^1.9.0",
+    "mobx": "^5.0.3",
+    "mobx-persist": "^0.4.1",
+    "mobx-persist-store": "^1.0.3",
+    "mobx-react": "^5.2.3",
+    "mobx-react-devtools": "^6.0.1",
+    "react": "^16.4.1",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^5.2.0"
+  }
+}
