@@ -11,7 +11,7 @@ const store = new MenuListModel();
 store.addMenu({name: 'Beers', id: 'beers', description: 'Beers & Details'});
 store.addMenu({name: 'Wines', id: 'wines', description: 'Wines & Details'});
 
-const result = hydrate('menuList', store)
+const result = hydrate('menuList', store.menus)
 result.then(() => console.log('store has been hydrated'));
 export const rehydrate = result.rehydrate;
 export default store;
