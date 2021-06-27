@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 import { Form, Button, Modal, Col } from 'react-bootstrap';
+import { store } from "../models/store";
 
 @observer
 class EditDetailsModal extends Component {
@@ -15,7 +16,7 @@ class EditDetailsModal extends Component {
 
     @action
     updateMenuDetails = () => {
-        const menus = this.props.store.getMenuList();
+        const menus = store.menuListStore.menus;
         const menu = menus.filter(item => item.id === this.props.menu.id)[0];
         this.name = menu.name;
         this.ingredients = menu.details.ingredients || "";
@@ -77,7 +78,7 @@ class EditDetailsModal extends Component {
             quantity: this.quantity,
             id: this.props.menu.id
         }
-        this.props.store.addDetails(details);
+        store.menuListStore.addDetails(details);
         this.handleClose();
         e.preventDefault();
     };

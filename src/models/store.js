@@ -1,17 +1,21 @@
 import MenuListModel from "./MenuListModel";
+import SelectedMenuModel from "./SelectedMenuModel";
 import { create } from 'mobx-persist';
 import localForage from 'localforage';
 
 const hydrate = create({
     storage: localForage,
-    jsonify: false
+    jsonify: true
 });
 
-const store = new MenuListModel();
-store.addMenu({name: 'Beers', id: 'beers', description: 'Beers & Details'});
-store.addMenu({name: 'Wines', id: 'wines', description: 'Wines & Details'});
+export class RootStore {
+    selectedMenuStore = new SelectedMenuModel();
+    menuListStore = new MenuListModel();
 
-const result = hydrate('menuList', store.menus)
-result.then(() => console.log('store has been hydrated'));
-export const rehydrate = result.rehydrate;
-export default store;
+    constructor() {
+        hydrate('selectedMenuStore', this.selectedMenuStore);
+        hydrate('menuListStore', this. menuListStore);
+    }
+}
+
+export const store = new RootStore();

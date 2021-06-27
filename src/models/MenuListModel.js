@@ -12,11 +12,6 @@ export default class MenuListModel {
   }
 
   @action
-  getMenuList() {
-    return this.menus;
-  }
-
-  @action
   addDetails({ name, ingredients, price, quantity, id }) {
     let index;
     this.menus.forEach((element, i) => { 

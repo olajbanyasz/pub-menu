@@ -17,7 +17,7 @@ class MenuList extends Component {
               <Link to={"/" + menu.id}>
                 {menu.name}
               </Link>
-              <EditDetailsModal menu={menu} store={store}/>
+              <EditDetailsModal menu={menu}/>
             </ListGroup.Item>
           ))}
         </ListGroup>
