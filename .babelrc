@@ -1,11 +1,16 @@
 {
   "presets": [
-    "react",
-    "es2015",
-    "stage-1",
-    "react-app"
+    "@babel/preset-react",
+    "@babel/preset-env",
+    "latest",
+    "react-app-babel-7"
   ],
   "plugins": [
-      "transform-decorators-legacy" /* should always be the first plugin! */
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
   ]
 }
