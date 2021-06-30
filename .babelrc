@@ -1,9 +1,7 @@
 {
   "presets": [
     "@babel/preset-react",
-    "@babel/preset-env",
-    "latest",
-    "react-app-babel-7"
+    "@babel/preset-env"
   ],
   "plugins": [
     [
