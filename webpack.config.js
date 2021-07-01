@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+process.env.NODE_ENV = "test";
 
 module.exports = {
   devtool: 'eval',
