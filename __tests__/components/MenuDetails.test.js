@@ -5,7 +5,7 @@ import {
 } from 'enzyme';
 
 describe('MenuDetails', () => {
-    
+
     beforeEach(function () {
         this.store = {
             menuListStore: {
@@ -19,7 +19,7 @@ describe('MenuDetails', () => {
     });
 
     it('should rendered correctly', () => {
-        const component = render( < MenuDetails / > );
+        const component = render( <MenuDetails /> );
         expect(component).toMatchSnapshot();
     });
 });
