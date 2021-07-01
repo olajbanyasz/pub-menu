@@ -6,7 +6,8 @@
     "start": "webpack-dev-server --hot --open",
     "build": "webpack",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "keywords": [
     "react",
